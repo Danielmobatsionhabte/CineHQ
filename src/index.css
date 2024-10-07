@@ -1,0 +1,10 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'flowbite';
+
+::selection{
+    color: #959595;
+}
+
