@@ -25,13 +25,13 @@ export const MovieDetail = () => {
     }
     fetchMovie();
    
-  }, []);
+  }, [params.id]);
   console.log(params);
   return (
     <main>
       <section className="flex flex-wrap justify-around py-5">
         <div className="max-w-sm">
-          <img className="rounded" src={image} alt="Movie Image" />
+          <img className="rounded" src={image} alt="Movie" />
         </div>
         <div className="max-w-2xl text-gray-900 dark:text-white md:text-left">
           <h1 className="mr-10 text-lg font-bold text-center my-3 sm:text-4xl sm:text-left">
@@ -88,7 +88,7 @@ export const MovieDetail = () => {
             href={`https://www.imdb.com/title/${movie.imdb_id}`}
             className="my-4 xs:max-sm: ml-2"
             target="_blank"
-            rel="noreferer"
+            rel="noopener"
           >
             <span className="mr-2 font-bold ">IMDB Code: </span>
             <span className="underline">
@@ -124,11 +124,11 @@ export const MovieDetail = () => {
 
         <div className="">
           <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-transparent dark:border-gray-700">
-            <a href="#">
+            <button>
               <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                 Production Companies
               </h5>
-            </a>
+            </button>
             <ul>
               {movie.production_companies
                 ? movie.production_companies.map((company) => (
@@ -211,10 +211,7 @@ export const MovieDetail = () => {
                 Production Companies
               </h2>
 
-              <ul
-                role="list"
-                className="space-y-4 text-gray-500 dark:text-gray-400"
-              >
+             
                 { movie.production_companies ?
                   movie.production_companies.map((company)=>(
                     <li className="flex space-x-2 rtl:space-x-reverse items-center">
@@ -225,7 +222,7 @@ export const MovieDetail = () => {
                   </li>
                   )) : ""
                 }
-               </ul>
+              
 
               
             </div>

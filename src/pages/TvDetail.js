@@ -23,7 +23,7 @@ export const TvDetail = () => {
 useEffect(()=>{
     fetchTv();
 
-  },[tvId])
+  },[fetchTv])
   
 
    

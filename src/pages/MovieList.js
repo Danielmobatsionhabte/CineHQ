@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 
 import "flowbite";
 import { Card } from "../components/Card";
