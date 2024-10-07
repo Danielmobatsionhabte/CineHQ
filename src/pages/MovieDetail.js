@@ -87,8 +87,6 @@ export const MovieDetail = () => {
           <a
             href={`https://www.imdb.com/title/${movie.imdb_id}`}
             className="my-4 xs:max-sm: ml-2"
-            target="_blank"
-            rel="noopener"
           >
             <span className="mr-2 font-bold ">IMDB Code: </span>
             <span className="underline">
