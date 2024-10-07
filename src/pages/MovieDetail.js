@@ -212,9 +212,9 @@ export const MovieDetail = () => {
              
                 { movie.production_companies ?
                   movie.production_companies.map((company)=>(
-                    <li className="flex space-x-2 rtl:space-x-reverse items-center">
-                      <img src={`https://image.tmdb.org/t/p/w500${company.logo_path}`} className="w-10" alt="company logo"/>
-                    <span className="leading-tight">
+                    <li className="flex space-x-2 rtl:space-x-reverse items-center my-5">
+                      <img src={company.logo_path? `https://image.tmdb.org/t/p/w500${company.logo_path}` : backup} className="w-10" alt="company logo"/>
+                    <span className="leading-tight dark:text-white">
                       {company.name}
                     </span>
                   </li>
