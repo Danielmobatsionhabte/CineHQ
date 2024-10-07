@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 export const formattedDate = ({release_date}) => {
     const date = new Date(release_date);

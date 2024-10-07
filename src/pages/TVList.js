@@ -2,11 +2,12 @@ import { Hero } from "../components/Hero";
 import { useFetch } from "../hooks/useFetch";
 import { Link } from "react-router-dom";
 import { TvCard } from "../components/TvCard";
+import { useTitle } from "../hooks/useTitle";
 
 export const TVList = ({ apiPath, name }) => {
  
   const { data: tvs } = useFetch(apiPath);
-  
+  useTitle(name +" CineHQ High Quality Movies and Tv Shows");
 
   console.log(tvs);
 

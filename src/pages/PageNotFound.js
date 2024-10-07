@@ -1,14 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {formattedDate} from "../functions/formattedDate";
 import {Link} from "react-router-dom";
 import pageNotFound from "../assets/images/404.png";
 export const PageNotFound = () => {
   const now = new Date();
   const today = now.toDateString();
-
-  return (
+ return (
     <main>
-      <section className="flex flex-col justify-center px-2">
+      <section className="flex flex-col justify-center px-2 h-screen">
         <div className="flex flex-col items-center my-2">
           <p className='text-center text-6xl sm:text-8xl text-slate-900 dark:text-white'>404, Oops!</p>
           <h1 className='text-2xl sm:text-4xl text-slate-900 dark:text-white py-4'>Page Not Found</h1>
