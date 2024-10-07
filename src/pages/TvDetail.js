@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+
 import {Link } from 'react-router-dom';
 import comingSoon from "../assets/images/comingsoon.png";
 import { useTitle } from '../hooks/useTitle';
