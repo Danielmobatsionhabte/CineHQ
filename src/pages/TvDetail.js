@@ -1,38 +1,34 @@
 import React, { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 import comingSoon from "../assets/images/comingsoon.png";
 import { useTitle } from '../hooks/useTitle';
 
 export const TvDetail = () => {
-  const {id:tvId}  = useParams();
-  const [tv, setTv] = useState({});
+ // const {id:tvId}  = useParams();
+ // const [tv, setTv] = useState({});
   useTitle("TvShow CineHQ Movies");
-  async function fetchTv(){
-    try{
-    const response = await fetch(`https://api.themoviedb.org/3/discover/tv?api_key=${process.env.REACT_APP_API_KEY}`);
-    const data = await response.json();
-    const foundTv =  data.results.find((tv) => tv.id === parseInt(tvId));
-    setTv(foundTv);
-    console.log(tv);
-    }catch(error){
-      console.error(error);
-    }
+//   async function fetchTv(){
+//     try{
+//     const response = await fetch(`https://api.themoviedb.org/3/discover/tv?api_key=${process.env.REACT_APP_API_KEY}`);
+//     const data = await response.json();
+//     const foundTv =  data.results.find((tv) => tv.id === parseInt(tvId));
+//     setTv(foundTv);
+//     console.log(tv);
+//     }catch(error){
+//       console.error(error);
+//     }
 
  
-}
-useEffect(()=>{
-    fetchTv();
+// }
+// useEffect(()=>{
+//     fetchTv();
 
-  },[tvId]);
-  
-
-   
-  return (
+//   },[tvId]);
+ return (
     <section>
       <div className='container'>
         <div className='flex flex-col items-center h-screen'>
-        
-        <img src={comingSoon} alt="Coming Soon" className='rounded-lg'/>
+         <img src={comingSoon} alt="Coming Soon" className='rounded-lg'/>
         <p className='dark:text-white text-4xl text-center items-center'>Tv Shows are Coming Soon</p>
         <p className='dark:text-white my-2 text-center  m-0'>Get ready for fresh episodes, thrilling stories, and unforgettable moments—brought to you by CineHQ. Stay tuned and don’t miss out on the entertainment coming your way!</p>
         <Link
